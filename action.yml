@@ -35,9 +35,9 @@ runs:
       run: |
         if [ -d "./tests" ];
         then
-          echo "::set-output name=files::*.py tests/*.py"
+          echo "files=*.py tests/*.py" >> $GITHUB_OUTPUT
         else
-          echo "::set-output name=files::*.py"
+          echo "files=*.py" >> $GITHUB_OUTPUT
         fi        
       shell: bash
     
